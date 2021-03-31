@@ -8,9 +8,14 @@ h1{
     border-width: 1px;
     text-align: center;
     color: rgb(255, 255, 255);
-    border-color: rgb(0, 183, 255);
+    /* border-color: rgb(0, 183, 255); */
     background-color: rgb(0, 183, 255);
     border-radius: 5px;
+    font-family: 'NOTO SANS TC';
+    font-weight: 600;
+    font-size: 26pt;
+    padding: 5px;
+    margin-bottom: 15px;
 }
 
 body{
