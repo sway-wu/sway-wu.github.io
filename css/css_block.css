@@ -2,3 +2,14 @@ img {
     height: 300px;
     border-radius: 50%;
 }
+
+.dog{
+    height: 300px;
+    width: 300px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    /* background-color: aliceblue; */
+    /* 這裡的圖片網址要用對css檔的相對路徑 */
+    background-image: url(./img/dog-cat.jpg);
+}
