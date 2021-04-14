@@ -19,5 +19,6 @@
 }
 
 .v-center{
+    /* 到垂直中心 */
     margin-top: calc((100vh - 200px)/2);
 }
