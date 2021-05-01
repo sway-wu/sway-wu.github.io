@@ -1,0 +1,24 @@
+.picture{
+    background-image: url(./履歷照片.jpg);
+    background-size: contain;
+    display: inline-block;
+    margin-right: 50px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.wid{
+    width: auto;
+    height: auto;
+}
+
+.wid1{
+    width: 300px;
+    height: 370px;
+}
+
+.wid2{
+    width: 800px;
+    height: 370px;
+    display: inline-block;
+}
