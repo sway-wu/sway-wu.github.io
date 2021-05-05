@@ -9,4 +9,6 @@
     iii. Navbar<br>
          <a herf = "https://getbootstrap.com/docs/5.0/components/navbar/">https://getbootstrap.com/docs/5.0/components/navbar/</a><br>
 3. 用css對樣式、字體及排版做微調
+   import google font "https://fonts.googleapis.com/css2?family=Itim&display=swap"
+
 
