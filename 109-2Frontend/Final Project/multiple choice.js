@@ -59,7 +59,7 @@ $("#btnnext").click(function () {
     if (tn == n){
         $("#choice").hide();
         $("table").show();
-        $("choice_result").addClass("result");
+        $("#choice_result").addClass("result");
         c_rate = (Math.round((correct / q.length) * 1000)) / 10
         show_result()
     }else{
