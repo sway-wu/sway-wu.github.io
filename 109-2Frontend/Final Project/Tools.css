@@ -1,0 +1,39 @@
+.circle{
+    width: 450px;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background-color: #f0fbff;
+    margin-top: 100px;
+    font-family: Sawarabi Gothic;
+    text-align: center;
+    line-height: 1.7;
+    font-size: 1700%;
+}
+
+.col-6{
+    margin-top: 50px;
+    width: 800px;
+}
+
+.btn{
+    background-color: #f0fbff;
+    color:rgb(0, 0, 0);
+    border-color: #b3d1ff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+.btn.btn-primary:active, .btn.btn-primary:hover {
+    background-color: #b3d1ff;
+    color:#ffffff;
+    border-color: #b3d1ff;
+}
+
+.btn.btn-primary:focus{
+    background-color: #f0fbff;
+    color:rgb(0, 0, 0);
+    border-color: #b3d1ff;
+}
