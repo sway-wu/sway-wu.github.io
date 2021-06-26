@@ -5,7 +5,6 @@
     margin-right: auto;
     border-radius: 50%;
     background-color: #f0fbff;
-    margin-top: 100px;
     font-family: Sawarabi Gothic;
     text-align: center;
     line-height: 1.7;
@@ -17,6 +16,10 @@
     width: 800px;
 }
 
+.gap-2{
+    gap: 15px;
+}
+
 .btn{
     background-color: #f0fbff;
     color:rgb(0, 0, 0);
@@ -24,6 +27,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 800px;
+    font-size: 130%;
 }
 
 .btn.btn-primary:active, .btn.btn-primary:hover {
@@ -36,4 +40,31 @@
     background-color: #f0fbff;
     color:rgb(0, 0, 0);
     border-color: #b3d1ff;
+    box-shadow: none;
+}
+
+.next{
+    margin-top: 50px;
+    width: 400px;
+    margin-left: auto;
+}
+
+.btnext{
+    width: 300px;
+}
+
+.correct{
+    width: 300px;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-family: 'Cambay', sans-serif;
+    font-weight: 700;
+    font-size: 150%;
+}
+
+.result{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
 }
