@@ -91,7 +91,7 @@ function run_question(qst_num){
     // 決定除正確答案外的其他選項
     while (s.length < 3){
         let a = Math.floor(Math.random() * 46)
-        if (a in s){
+        if (s.includes(a)){
         }else if (a != q[qst_num]){
             s.unshift(a)
         }
@@ -282,6 +282,9 @@ function show_result(){
             $("tbody").append('<tr><th scope="row">' + (i + 1) + '</th><td>' + j50_Hiragana[q[i]] + '</td><td>' + j + '</td><td>' + answer[i] + '</td></tr>');
         } else{
             let j = j50_sound[q[i]]
+            if (answer[i] == undefined || answer[i] == NaN){
+                answer[i] = ""
+            }
             $("tbody").append('<tr class="table-danger"><th scope="row">' + (i + 1) + '</th><td>' + j50_Hiragana[q[i]] + '</td><td>' + j + '</td><td>' + answer[i] + '</td></tr>');
         }
     }
