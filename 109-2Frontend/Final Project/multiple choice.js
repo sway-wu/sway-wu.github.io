@@ -10,7 +10,7 @@ const j50_sound = ["a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", 
 
 // 決定題目
 let rq = Math.floor(Math.random() * 46)
-let n = 3
+let n = 20
 let tn = 0
 let q = []
 while (q.length < n){
