@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+.mod{
+    font-family: "Itim";
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    font-size: 13pt;
+}
+
+
+nav{
+    font-family: "Itim";
+}
