@@ -262,6 +262,7 @@ function restart(){
     $("#back").hide();
     $("#choice").show();
     $("#cresult_tbody >tr").remove();
+    $("#score_tbody >tr").remove();
 
     const cl = run_question(tn)
     ans = cl.indexOf(0) + 1
