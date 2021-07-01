@@ -106,14 +106,14 @@ tr{
 
 .save{
     margin-top: 30px;
-    width: 400px;
+    width: 730px;
     margin-left: auto;
     margin-bottom: 10px;
 }
 
 .record{
     margin-top: 10px;
-    width: 400px;
+    width: 730px;
     margin-left: auto;
     margin-bottom: 50px;
 }
@@ -154,7 +154,7 @@ tr{
 }
 
 .score{
-    width: 1200px;
+    width: 1200px !important;
     margin-left: auto;
     margin-right: auto;
 }
@@ -173,4 +173,15 @@ tr{
     width: 300px;
     margin-left: auto;
     margin-bottom: 50px;
+}
+
+.btnsave{
+    width: 300px;
+    box-shadow: none;
+}
+
+.btn.btn-primary.btnsave:active, .btn.btn-primary.btnsave:hover {
+    background-color: #b3d1ff;
+    color:#ffffff;
+    border-color: #b3d1ff;
 }

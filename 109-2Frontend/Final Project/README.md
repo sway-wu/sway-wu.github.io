@@ -9,7 +9,7 @@
    引用bootstrap來做網頁的元件
    利用localstorage處存資料
 
-履歷網址<br>
+報告網址<br>
 https://youtu.be/Dv0Bs3sn_zE
 https://sway-wu.github.io/109-2Frontend/Final%20Project/Japanese-50.html
 

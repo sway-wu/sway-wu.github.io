@@ -86,9 +86,9 @@ $("#save").click(function () {
     $("#input_name").show();
 });
 
-$("#close").click(function () { 
-    $("#input_name").hide();
-});
+// $("#close").click(function () { 
+//     $("#input_name").hide();
+// });
 
 $("#save_to_data").click(function () { 
     // 把資料寫入localstorage
@@ -115,15 +115,30 @@ $("#save_to_data").click(function () {
 
 // 顯示作答紀錄
 $("#record").click(function () {
-    id_list.splice(0, id_list.length)
     $("#choice_result").hide();
     $("#score").show();
     $("#score_detail").hide();
     $("#score").addClass("result");
-    debugger
+    // debugger
     $("#delete").hide();
     // console.log(w)
     show_rec()
+    $("#score_tbody :input:checkbox").hide();
+    // console.log(id_list)
+    // 顯示該次回答的詳細資料
+    $('#score_tbody :button').click(show_detail)
+    $("#restart").show();
+});
+
+$("#record_all").click(function () {
+    $("#choice_result").hide();
+    $("#score").show();
+    $("#score_detail").hide();
+    $("#score").addClass("result");
+    // debugger
+    $("#delete").hide();
+    // console.log(w)
+    show_allrec()
     $("#score_tbody :input:checkbox").hide();
     // console.log(id_list)
     // 顯示該次回答的詳細資料
@@ -176,6 +191,13 @@ $("#back").click(function () {
 });
 
 $("#restart").click(function () { 
+    debugger
+    restart()
+    $("#score_tbody >tr").remove();
+});
+
+$("#restart_").click(function () { 
+    debugger
     restart()
     $("#score_tbody >tr").remove();
 });
@@ -313,7 +335,7 @@ function show_result(){
 function show_rec(){
     id_list.splice(0, id_list.length)
     check_id.splice(0, check_id.length)
-    debugger
+    // debugger
     json = JSON.parse(localStorage.getItem(player_name))
     if (json[0].length != json[1].length){
         let it = "rec_1"
@@ -324,8 +346,6 @@ function show_rec(){
         $("#score_tbody").append(x);
         id_list.push(it)
         check_id.push(checkid)
-    } else if (json == null){
-
     } else{
         for (let i = 0; i < json.length; i++){
             let it = "rec_" + (i + 1)
@@ -336,6 +356,26 @@ function show_rec(){
             $("#score_tbody").append(x);
             id_list.push(it)
             check_id.push(checkid)
+        }
+    }
+}
+
+function show_allrec(){
+    debugger
+    key_list = Object.keys(localStorage)
+    for (key = 0; key < key_list.length; key++){
+        json = JSON.parse(localStorage.getItem(key_list[key]))
+        xn = '<tr><th scope="row">Player ID</th><td>' + key_list[key] + '</td><td></td><td></td><td></td></tr>'
+        $("#score_tbody").append(xn);
+        if (json[0].length != json[1].length){
+            let x = '<tr><th scope="row">' + 1 + '</th><td>' + json[0][0] + '</td><td>' + json[0][1] + '</td><td></td><td></td></tr>'
+            $("#score_tbody").append(x);
+        } else{
+            for (let i = 0; i < json.length; i++){
+                let x = '<tr><th scope="row">' + (i + 1) + '</th><td>' + json[i][0][0] + '</td><td>' + json[i][0][1] + 
+                        '</td><td></td><td></td></tr>'
+                $("#score_tbody").append(x);
+            }
         }
     }
 }
