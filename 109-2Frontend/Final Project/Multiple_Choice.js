@@ -11,8 +11,8 @@ const j50_sound = ["a", "i", "u", "e", "o", "ka", "ki", "ku", "ke", "ko", "sa", 
 // 決定題目
 let rq = Math.floor(Math.random() * 46)
 let n = 20
-let tn = 0
-let q = []
+let tn = 0 // tn 為計數用(tn + 1)即為題號
+let q = [] // q為題目列，決定n個不重複的平假名題目
 while (q.length < n){
     if (q.includes(rq)){
     } else {
@@ -28,7 +28,7 @@ let check_id = []
 let clicked = 0
 let correct = 0
 let ans = 0
-let c_rate = (Math.round((correct / q.length) * 1000)) / 10
+let c_rate = (Math.round((correct / q.length) * 1000)) / 10 // 計算答對率
 answer = []
 while (answer.length < n){
     answer.push("")
@@ -37,18 +37,22 @@ k = []
 w = []
 player_name = "e"
 
+// 本文
 $( document ).ready(function() {
 
+// 把成績顯示區域隱藏起來
 $("#choice_result").hide();
 $("#score").hide();
 $("#back").hide();
 
+
 const cl = run_question(tn)
-ans = cl.indexOf(0) + 1
+ans = cl.indexOf(0) + 1 // 答案位置
 // console.info(ans)
 // check(ans)
 $("#choicebtn :button").click(clickAnswer)
 
+// 當Next被點擊時顯示下一題並更新網頁資訊
 $("#btnnext").click(function () {
     $("#correct").text(correct);
     $("#choicebtn :button").removeClass("btn_correct btn_fail")
@@ -77,11 +81,12 @@ $("#btnnext").click(function () {
         // 確認選取選項是否為正確
         ans = cl.indexOf(0) + 1;
         // console.info(ans)
-        //check(ans)
+        // check(ans)
     }
 
 });
 
+// 點選save時顯示彈跳視窗
 $("#save").click(function () { 
     $("#input_name").show();
 });
@@ -130,6 +135,7 @@ $("#record").click(function () {
     $("#restart").show();
 });
 
+// 顯示所有ID的作答紀錄
 $("#record_all").click(function () {
     $("#choice_result").hide();
     $("#score").show();
@@ -146,6 +152,7 @@ $("#record_all").click(function () {
     $("#restart").show();
 });
 
+// 垃圾桶被點下時顯示checkbox讓使用者選擇要刪除哪些紀錄，並顯示Delete鈕
 $("#trash").click(function () { 
     $("#score_tbody :input:checkbox").show();
     $("#delete").show();
@@ -153,9 +160,10 @@ $("#trash").click(function () {
     $('#score_tbody :button').click(show_detail)
 });
 
+// 點下Delete時執行刪除作業
 $("#sure_to_delete").click(function () { 
     // 刪除所選紀錄資料
-    debugger
+    // debugger
     json = JSON.parse(localStorage.getItem(player_name))
     $("#score_tbody >tr>td :input:checkbox:checked").each(function(){
         // console.info(this.id)
@@ -176,6 +184,7 @@ $("#sure_to_delete").click(function () {
     $('#score_tbody :button').click(show_detail)
 });
 
+// 回前頁
 $("#back").click(function () { 
     $("#score_record").show();
     $("#trashcan").hide();
@@ -191,13 +200,13 @@ $("#back").click(function () {
 });
 
 $("#restart").click(function () { 
-    debugger
+    // debugger
     restart()
     $("#score_tbody >tr").remove();
 });
-
+// 雖然兩者功能相同，但若要用ID selector就要分開寫，因為ID是獨一無二的
 $("#restart_").click(function () { 
-    debugger
+    // debugger
     restart()
     $("#score_tbody >tr").remove();
 });
@@ -259,6 +268,7 @@ function run_question(qst_num){
     return c
 }
 
+// 重新開始
 function restart(){
     q.splice(0, q.length)
     while (q.length < n){
@@ -306,7 +316,7 @@ function clickAnswer(){
     }
 }
 
-//顯示結果
+// 顯示結果
 function show_result(){
     const rec = []
     let e = ""
@@ -360,6 +370,7 @@ function show_rec(){
     }
 }
 
+// 顯示所有ID的作答紀錄
 function show_allrec(){
     debugger
     key_list = Object.keys(localStorage)
