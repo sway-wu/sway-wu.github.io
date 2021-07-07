@@ -1,0 +1,1 @@
+$("#area").load("./Multiple_Choice.html")
